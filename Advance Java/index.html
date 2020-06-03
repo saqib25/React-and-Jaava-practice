@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+ <style>
+     .dynamic{
+         color:red;
+     }
+ </style>   
+</head>
+<body>
+    <script>
+
+//    local and global scope===========
+
+// if (true){
+//     // global scope=====
+//     var a="i am saqib";
+//     console.log (a);
+// }
+// console.log (a);
+
+
+// if (true){
+//     // local scope=====
+//     let b="my father is saleem";
+//     console.log (b);
+// }
+// // b is not defined
+// // console.log (b);  
+
+
+// function show(){
+//     // local varibale
+//     var c="my age is 22";
+//     console.log(c);
+// }
+// show();
+// // not defined
+// // console.log(c);
+
+// function disp(){
+//     // global variable
+//     j="i am a global variable inside function";
+//     console.log (j);
+// }
+
+// disp();
+
+// if (true){
+//     console.log(j);
+// }
+
+// function disp2(){
+//     // global variable
+//     var k="i am a local variable inside function";
+//     console.log (k);
+// }
+
+// disp2();
+
+// if (true){
+//     // console.log(k);
+// }
+
+
+// function call(){
+//     var i= "i am a outer function";
+//     console.log (i);
+//     function call2(){
+//     var f= "i am a inner function";
+//     console.log(f);
+//     console.log (i);
+    
+//     }
+//     call2();
+
+// }
+// call();
+
+
+// if (true){
+//     var d= 10;
+//     console.log(d);
+// }
+// console.log(d);
+
+// if (true){
+//     let e= 10;
+//     console.log(e);
+// }
+// console.log(e);
+
+
+// for (let i=0; i<10; i++){
+//     console.log(i);
+// }
+// // not defined
+// console.log(i);
+
+// for (var i=0; i<10; i++){
+//     console.log(i);
+    // opar wala chalega 0-9 tak
+// }
+
+// 10 tak chalega
+// console.log(i);
+
+
+// var a= `this is a girl
+// i am saqib al
+// i am from karachi there is a one god`;
+// console.log(a);
+
+
+// var age= 100;
+// function go(){
+//     var age= 200;
+//     var hair= "black";
+//     console.log(age);
+//     console.log(hair);
+// }
+// go();
+// 200 and black
+
+
+// var firstName= "daniyal" ;
+// var secondName= `saqib ${firstName}`; 
+// console.log(secondName);
+
+
+/*var obj1 = {
+    age : 30
+}
+var obj2 = {
+    age : 40
+}
+
+// obj1=obj2;
+// obj1.age=55;
+// console.log(obj1); //55
+// console.log(obj2);  //55
+
+var obj3= { ...obj2, ...obj1};
+// console.log(obj3); //30
+obj3.age=50;
+// console.log(obj2); //40
+// console.log(obj3);  //50
+// console.log(obj1);  //30
+
+*/
+/*var obj1= {
+    age: 30,
+    name: "saqib",
+    employye: 50
+}
+ 
+var firstName= 'age';
+obj1['first-name']= "ali";
+console.log(obj1); 
+
+*/
+
+
+// var obj1= {
+//     age: 30,
+//     name: "saqib",
+//     employye: 50
+// }
+
+// var obj2={
+//     age: 40
+// }
+// obj1.age=40;
+// console.log(obj1);
+
+// var obj4= object.freeze(obj1);
+
+// console.log(obj4);
+// obj1.age=40;
+// console.log(obj4);
+// console.log(obj1);
+
+
+/* var getValue=prompt('get an object press the key');
+
+var obj1= {
+    age: 25,
+    name: "daniyal",
+    employe: 50
+}
+obj1.firstName= getValue;
+console.log(obj1);
+*/
+
+/* var getValue=prompt('get an object press the key');
+
+var obj1= {
+    age: 25,
+    name: "daniyal",
+    employe: 50
+}
+console.log(obj1[getValue]);  /undefinmed/
+
+*/
+
+/*var person = {name: 'daniyal'};
+function doStuff(obj1){
+ obj1.name = 'tariq';
+ console.log(person);
+}
+doStuff(person); /tariq/
+*/
+
+
+/* var name1= 'daniyal'
+function doStuff(name){
+    var name1= "tariq";
+    console.log(name1); /tariq/
+}
+doStuff(name1);
+console.log(name1); /daniyal/
+*/
+
+/*var obj= {name: "usman"};
+function objCall(name){
+    var obj= "bashir";
+    console.log(obj);
+}
+objCall(obj); /bashir/
+console.log(obj); /usman/
+*/
+
+// /==========Closures=======/ 
+
+
+/*function outer(){
+var outVar= "outter...........";
+function inner(){
+    var innerVar= "inner..........";
+    console.log(outVar);
+    console.log(innerVar);
+}
+return inner;
+
+}
+inner();
+var getFunc= outer();
+*/
+
+/*function myScore(){
+    var score= 1;
+    return function abc(){
+    console.log(score++);    
+    }
+}
+var hockey=myScore();
+hockey();
+*/
+
+
+
+/*function company(){
+   var myName = "daniyal";   
+   console.log('company',myName); /company daniyal/
+   function employee(){     
+  console.log('employee',myName); /employe daniyal/   
+}
+   employee()
+ }
+ company()
+*/
+
+/*function company(name){
+var companyName= name;
+return function employee(number){
+ console.log(companyName + 'has' + number + "employees");
+ return companyName + 'has' + number + 'employes';    
+}
+}
+const employee= company('panacloud');
+const employee1= company("prostack");
+employee(2);
+employee1(4);
+// */ 
+//smjh nai aayi
+
+
+/*function sportsGame(name){
+   let score = 1;
+   return function abc (){
+     console.log(score++);
+   }
+ }
+  var game = sportsGame('hockey');
+  var game1 = sportsGame('cricket');
+  game(); //1
+  game1();  //1
+
+*/
+
+
+/*function myScore (){
+   var score = 1;
+   function abc(){
+     console.log(score++);
+   }
+   abc(); //1
+ }
+  myScore();
+*/
+
+
+//========== ES5=====
+
+/* function Students(n,ag,add){
+    this.name=n;
+    this.age=ag;
+    this.address= add;
+}
+var rizwan= new Students("rizwzn", 22, "address.....");
+console.log(rizwan);
+
+var ameen= new Students("rizwzn", 22, "address.....");
+console.log(rizwan);
+
+var saqib= new Students("rizwzn", 22, "address.....");
+console.log(rizwan);
+
+*/
+
+
+
+
+/* function Students(n,ag,add){
+    this.name= n
+    this.age=ag
+    this.address=add
+    this.func=function(){
+    console.log("runnig function" + this.name);    
+    }
+}
+var rizwan= new Students("rizwan",20, "address.....");
+console.log(rizwan.func());
+
+var ameen= new Students("ameen", 25, "address.......");
+console.log(ameen.func());
+*/
+
+
+
+// ==========classs===========
+
+/* class Students {
+    constructor(n,ag,add){
+    this.name=n;
+    this.age=ag;
+    this.address= add;    
+    }
+    func(){
+        console.log("run function");
+    }
+}
+var ameen= new Students("ameen", 22, "address....");
+console.log(ameen);
+
+var saqib= new Students("saqib", 25, "address....");
+console.log(saqib);
+
+*/
+
+
+// ======= class paret child relation=======
+
+/* class Parent {
+    constructor(age){
+     this.age= age;
+     this.name= "zeeshan";
+     this.address= "address......"   
+    }
+}
+class Child extends Parent{
+    constructor(age){
+     super (age);   
+    }
+}
+
+var _child= new Child(23);
+console.log(_child);
+*/
+
+//===== Example 2=====
+
+/* class Parent {
+    constructor(age,name){
+     this.age= age;
+     this.name= name;
+     this.address= "address......"   
+    }
+}
+class Child extends Parent{
+    constructor(age,name){
+     super (age,name);   
+    }
+}
+
+var _child= new Child(23, "ali");
+console.log(_child);
+
+*/
+
+// ======== example 2 end======
+
+
+
+
+
+
+
+
+    </script>
+
+
+<!-- ===========DOM========== -->
+
+<!-- <h1>Saqib ali</h1> -->
+<!-- <h4 id="name1">saqib</h4>
+<h1 class="head1">Helloworld2</h1>
+<h1 class="head1">Helloworld2</h1>
+<h1 class="head1">Helloworld2</h1>
+<h1 class="head1">Helloworld2</h1>
+<h1 class="head1">Helloworld2</h1>
+<h1 class="head1">Helloworld2</h1>
+<h1 class="head1">Helloworld2</h1>
+<h1 class="head1">Helloworld2</h1>
+<h1 class="head1">Helloworld2</h1>
+<h1 class="head1">Helloworld2</h1>
+<h1 class="head1">Helloworld2</h1>
+<h1 class="head1">Helloworld2</h1>
+<h1 class="head1">Helloworld2</h1>
+<h1 class="head1">Helloworld2</h1>
+<h1 class="head1">Helloworld2</h1>
+<h1 class="head1">Helloworld2</h1>
+<h1 class="head1">Helloworld2</h1>
+<h1 class="head1">Helloworld2</h1>
+<h1 class="head1">Helloworld2</h1>
+<h1 class="head1">Helloworld2</h1>
+
+<h2 class="dom">Hellodom</h2> -->
+
+<!-- ======Dom selecting element======== -->
+
+<!-- =======Evenets===== -->
+
+<!-- <button class="hit">click me</button>
+<button class="hit">click me</button>
+<button class="hit">click me</button>
+<button class="hit">click me</button>
+<button class="hit">click me</button>
+<button class="hit">click me</button>
+<button class="hit">click me</button>
+<button class="hit">click me</button>
+<button class="hit">click me</button>
+<button class="hit">click me</button>
+<button class="hit">click me</button>
+<button class="hit">click me</button> -->
+
+
+
+<!-- =============object=========== -->
+
+
+<!-- ======this===== -->
+<button class="one">one</button>
+<button class="two">two</button>
+
+
+<script src="java.js"></script>
+</body>
+</html>
