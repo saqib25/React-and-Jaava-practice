@@ -1,9 +1,11 @@
 import React, { useContext } from 'react';
 import counterContext from './CounterContext';
 
+
 const Context = () => {
     
     let counterValue = useContext(counterContext)
+
     
     return (
         <div>
