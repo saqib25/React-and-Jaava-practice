@@ -29,6 +29,7 @@ export default function GlobalStats() {
             let data = await response.json();
             delete data.results[0].source;
             setGlobalData(data.results[0]);
+            console.log(data.results[0])
         }
         getData();
     }, [])

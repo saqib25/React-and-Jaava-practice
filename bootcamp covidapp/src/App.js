@@ -8,7 +8,6 @@ import FootNav from './Components/FootNav'
 function App() {
   const screenConfig = useState(0);
 
-
   return (
     <div className="App">
       <Navbar />

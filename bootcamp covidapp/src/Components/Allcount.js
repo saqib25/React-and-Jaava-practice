@@ -24,9 +24,9 @@ export default function AllCountries() {
         async function getData() {
             const response = await fetch("https://api.thevirustracker.com/free-api?countryTotals=ALL");
             let data = await response.json();
-
             setGlobalData(Object.values(Object.values(data.countryitems)[0]));
             console.log(Object.values(Object.values(data.countryitems)[0]))
+
         }
         getData();
     }, [])
@@ -45,6 +45,7 @@ export default function AllCountries() {
                 </thead>
                 <tbody>
                     {globalData.map((key, ind) => {
+                        
                         return (
                             <tr key={ind}>
                                 <th className={classes.title}>

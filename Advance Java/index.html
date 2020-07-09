@@ -415,9 +415,86 @@ console.log(_child);
 // ======== example 2 end======
 
 
+// var abc={
+//     name: "saqib",
+//     age: 34,
+//     class:"Math"
+// }
+// console.log(abc);
+// let {age}=abc;
+// console.log(age);
+
+// var age = prompt('How old are you?'); 
+// var person = { name: 'daniyal', sports: 'cricket', age: 12 } 
+// person.age = 15 
+// person.name = "saqib" 
+// var { name, sports, age, Address = "Add" } = person // 
+// // person.pass.push(name2) 
+// person.name = "maavia" 
+// console.log(name) 
+// console.log(sports) 
+// console.log(age) 
+// console.log(Address) 
+// console.log(person)
+
+// var age = prompt('How old are you?');
+// var person = {
+//  name: 'daniyal',
+//  sports: 'cricket',
+//  age: 12
+// }
+// console.log(person['age']);
+
+// var obj={
+//     name: "saqib",
+//     class: "CNC",
+//     age: 24
+// }
+
+// var a=(Object.keys(obj));
+// console.log(Object.values(obj));
+// console.log(Object.keys(obj));
 
 
+// var person = { name: 'daniyal', sports: 'cricket', age: 12 } 
+// person.age=22;
+// person.name="hassan"
+// console.log(person);
 
+// var {name,sports,age, addres= "add"}=person;
+
+// console.log(name);
+// console.log(sports);
+// console.log(age);
+// console.log(addres);
+// console.log(person);
+
+
+// var a= {name: "saqib", color: "orange", nick: "ali", age: 54}
+// // console.log(a);
+
+// var {... value} = a;
+// // console.log(name);
+// // console.log(color);
+// console.log(value);
+
+// =========spread Operator=========
+// const parts = ['shoulders', 'knees']; 
+// const lyrics = ['head', ...parts, 'and', 'toes'];
+
+// console.log(lyrics);
+
+// const arr=[1,2,3];
+// const arr2=[...arr]
+// console.log(arr2);
+// arr2.push(4);
+// console.log(arr2);
+
+var arr = ["Amir Maavia","Hassan","Hammad"]
+var newarr = arr.map((value,index) =>{
+    return value
+})
+document.querySelector('.name').innerHTML = newarr
 
 
 
@@ -477,7 +554,9 @@ console.log(_child);
 <button class="one">one</button>
 <button class="two">two</button>
 
-
+<ul>
+    <li class="name"></li>
+</ul>
 <script src="java.js"></script>
 </body>
 </html>
